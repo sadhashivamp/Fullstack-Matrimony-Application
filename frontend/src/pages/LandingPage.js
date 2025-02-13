@@ -10,12 +10,10 @@ import StarsIcon from '@mui/icons-material/Stars';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SuccessStories from "../components/SuccessStories";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
     const navigate = useNavigate();
-    const { t } = useTranslation();
     return (
         <Box sx={{ backgroundColor: "#f4f5f9", minHeight: "100vh" }}>
             <Navbar />
@@ -79,7 +77,7 @@ const LandingPage = () => {
                                 letterSpacing: "1.5px",
                             }}
                         >
-                            {t("findMatch")} ❤️
+                            Find Your Perfect Match ❤️
                         </Typography>
                         <Typography
                             variant="h5"
@@ -89,7 +87,7 @@ const LandingPage = () => {
                                 textShadow: "1px 1px 5px rgba(255,255,255,0.3)",
                             }}
                         >
-                            {t("securePlatform")}
+                            Secure & Trusted Matrimony Platform with Verified Profiles
                         </Typography>
                         <Button
                             variant="contained"
@@ -106,7 +104,7 @@ const LandingPage = () => {
                                 "&:hover": { backgroundColor: "#e3e3e3" },
                             }}
                         >
-                            {t("getStarted")}
+                            Get Started
                         </Button>
                     </motion.div>
                 </Container>

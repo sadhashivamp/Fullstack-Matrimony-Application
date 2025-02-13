@@ -7,10 +7,8 @@ import LoginIcon from "@mui/icons-material/Login";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-    const { t, i18n } = useTranslation();
     const navigate = useNavigate();
     const [mobileOpen, setMobileOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
@@ -25,11 +23,6 @@ const Navbar = () => {
         setAnchorEl(event.currentTarget);
     };
 
-    // Change Language
-    const changeLanguage = (lang) => {
-        i18n.changeLanguage(lang);
-        setAnchorEl(null);
-    };
 
     return (
         <AppBar position="sticky" sx={{
@@ -39,7 +32,7 @@ const Navbar = () => {
             boxShadow: "0px 5px 15px rgba(0,0,0,0.2)"
         }}>
             <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                
+
                 {/* Mobile Menu Icon */}
                 <IconButton
                     sx={{ display: { xs: "block", md: "none" }, color: "white" }}
@@ -74,7 +67,7 @@ const Navbar = () => {
                         "&:hover": { backgroundColor: "rgba(255,255,255,0.2)" }
                     }} onClick={() => navigate("/login")}>
                         <LoginIcon sx={{ mr: 1 }} />
-                        {t("login")}
+                        Login
                     </Button>
 
                     <Button variant="contained" sx={{
@@ -87,7 +80,7 @@ const Navbar = () => {
                         "&:hover": { backgroundColor: "#e0e0e0" }
                     }} onClick={() => navigate("/register")}>
                         <PersonAddIcon sx={{ mr: 1 }} />
-                        {t("register")}
+                        Get Started
                     </Button>
 
                     {/* Language Switcher */}
@@ -130,7 +123,7 @@ const Navbar = () => {
                             }}
                         >
                             <LoginIcon sx={{ mr: 1 }} />
-                            <ListItemText primary={t("login")} />
+                            {/* <ListItemText primary={t("login")} /> */}
                         </ListItemButton>
 
                         <ListItemButton
@@ -145,7 +138,7 @@ const Navbar = () => {
                             }}
                         >
                             <PersonAddIcon sx={{ mr: 1 }} />
-                            <ListItemText primary={t("register")} />
+                            {/* <ListItemText primary={t("register")} /> */}
                         </ListItemButton>
 
                         <ListItemButton
@@ -166,7 +159,7 @@ const Navbar = () => {
             </Drawer>
 
             {/* Language Menu (Same Style for Desktop & Mobile) */}
-            <Menu
+            {/* <Menu
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
                 onClose={() => setAnchorEl(null)}
@@ -202,7 +195,7 @@ const Navbar = () => {
                         <ListItemText>{lang.flag} {lang.label}</ListItemText>
                     </MenuItem>
                 ))}
-            </Menu>
+            </Menu> */}
         </AppBar>
     );
 };
