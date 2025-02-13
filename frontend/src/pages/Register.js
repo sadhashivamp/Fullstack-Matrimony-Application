@@ -17,6 +17,8 @@ const Register = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    console.log(error)
+
     const handleRegister = async (e) => {
         e.preventDefault();
         setError("");
@@ -38,6 +40,8 @@ const Register = () => {
                 phone,
                 password
             });
+
+            console.log(response)
 
             alert("✅ Registration Successful! Please login.");
             navigate("/login");

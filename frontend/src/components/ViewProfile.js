@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import {
-    Container, Box, Typography, Button, Avatar, Grid, Card, CardContent, IconButton, Divider, Chip, Tooltip, Dialog, DialogContent, DialogTitle
+    Container, Box, Typography, Button, Avatar, Grid, Card, CardContent, IconButton, Divider, Chip, Tooltip,
 } from "@mui/material";
-import { Favorite, Message, Call, Visibility, Verified, Report, Lock, Star, PersonAdd, Share, VideoCall, People, Public } from "@mui/icons-material";
-import { motion } from "framer-motion";
+import { Favorite, Message, Verified, Lock, Share, VideoCall } from "@mui/icons-material";
 
 // Dummy Profile Data
 const profileData = {
@@ -42,14 +41,13 @@ const profileData = {
     matchCompatibility: "92%",
     videoIntro: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
     phoneUnlocked: false,
-    socialUnlocked: false,
 };
 
 const ViewProfile = () => {
     const [openGallery, setOpenGallery] = useState(false);
-    const [openVideo, setOpenVideo] = useState(false);
     const [phoneUnlocked, setPhoneUnlocked] = useState(profileData.phoneUnlocked);
-    const [socialUnlocked, setSocialUnlocked] = useState(profileData.socialUnlocked);
+
+    console.log(openGallery)
 
     return (
         <Container maxWidth="md" sx={{ py: 5 }}>

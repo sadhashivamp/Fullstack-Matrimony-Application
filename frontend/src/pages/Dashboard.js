@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-    AppBar, Toolbar, IconButton, Avatar, Box, Typography, Grid, Modal, Paper, Badge, CircularProgress
+    AppBar, Toolbar, IconButton, Avatar, Box, Typography, Grid, Modal, Badge, CircularProgress
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -17,10 +17,10 @@ const Dashboard = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [userProfile, setUserProfile] = useState(null);
     const [profileModalOpen, setProfileModalOpen] = useState(false);
-    const [notifications, setNotifications] = useState(3);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-
+    const notifications = 3;
+    
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
@@ -77,7 +77,7 @@ const Dashboard = () => {
 
             {/* Profile Modal */}
             <Modal open={profileModalOpen} onClose={() => setProfileModalOpen(false)}>
-                <Box sx={{p: 2}}>
+                <Box sx={{ p: 2 }}>
                     <IconButton sx={{ position: "absolute", top: 10, right: 10 }} onClick={() => setProfileModalOpen(false)}>
                         <CloseIcon />
                     </IconButton>

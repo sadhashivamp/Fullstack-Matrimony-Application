@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {
     Avatar, Typography, Button, Box, CircularProgress, IconButton, Grid, Card, CardMedia, CardActions,
-    Tooltip, Dialog, DialogContent
+    Tooltip,
 } from "@mui/material";
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import DeleteIcon from '@mui/icons-material/Delete';
-import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
 
 const API_BASE_URL = "https://fullstack-matrimony-application.onrender.com/api/profile"; // ✅ Base API URL
@@ -14,7 +13,6 @@ const API_BASE_URL = "https://fullstack-matrimony-application.onrender.com/api/p
 const ProfileSidebar = ({ userProfile }) => {
     const [imageGallery, setImageGallery] = useState([]);
     const [loadingImages, setLoadingImages] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
 
     // ✅ Fetch User's Gallery Images when Profile Loads

@@ -18,6 +18,8 @@ const Login = () => {
     const [snackbarMessage, setSnackbarMessage] = useState("");
     const navigate = useNavigate();
 
+    console.log(error)
+
     const handleLogin = async (e) => {
         e.preventDefault();
         setError("");

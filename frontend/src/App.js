@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -11,7 +9,6 @@ import UserProfileSetup from "./pages/UserProfileSetup";
 import ProfileCard from "./pages/ProfileCard";
 import Dashboard from "./pages/Dashboard";
 import { CssBaseline } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
 import { ThemeProviderWrapper } from "./context/ThemeContext";
 import ViewProfile from "./components/ViewProfile";
 

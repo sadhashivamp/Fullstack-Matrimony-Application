@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-    Box, TextField, Button, Stepper, Step, StepLabel, Typography, Container, Avatar, MenuItem, Paper, IconButton, LinearProgress
+    Box, TextField, Button, Typography, Container, Avatar, MenuItem, Paper, IconButton, LinearProgress
 } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import axios from "axios";
@@ -24,8 +24,8 @@ const ProfileSetup = () => {
 
     const [errorMessage, setErrorMessage] = useState("");
     const [activeStep, setActiveStep] = useState(0);
-    const [loading, setLoading] = useState(false);
-    const [userId, setUserId] = useState(null);
+
+    const loading = false;
 
     useEffect(() => {
         const fetchUserProgress = async () => {
