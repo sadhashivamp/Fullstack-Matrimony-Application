@@ -9,7 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE_URL = "http://localhost:5000/api/profile"; // ✅ Base API URL
+const API_BASE_URL = "https://fullstack-matrimony-application.onrender.com/api/profile"; // ✅ Base API URL
 
 const ProfileSidebar = ({ userProfile }) => {
     const [imageGallery, setImageGallery] = useState([]);
@@ -175,7 +175,7 @@ const ProfileSidebar = ({ userProfile }) => {
                         imageGallery.map((image, index) => (
                             <Grid item key={index}>
                                 <Card>
-                                    <CardMedia component="img" image={`http://localhost:5000${image}`} sx={{ height: 100 }} />
+                                    <CardMedia component="img" image={`https://fullstack-matrimony-application.onrender.com${image}`} sx={{ height: 100 }} />
                                     <CardActions>
                                         <IconButton onClick={() => handleDeleteImage(image)}>
                                             <DeleteIcon sx={{ color: "red" }} />

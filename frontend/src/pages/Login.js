@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import SnackbarComponent from "../components/SnackbarComponent ";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://fullstack-matrimony-application.onrender.com/api";
 
 
 const Login = () => {

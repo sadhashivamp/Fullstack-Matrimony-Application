@@ -68,7 +68,7 @@ const ProfileSetup = () => {
 
             try {
                 const token = localStorage.getItem("token");
-                const res = await fetch("http://localhost:5000/api/profile/upload-photo", {
+                const res = await fetch("https://fullstack-matrimony-application.onrender.com/api/profile/upload-photo", {
                     method: "POST",
                     headers: { Authorization: `Bearer ${token}` },
                     body: formData
@@ -143,7 +143,7 @@ const ProfileSetup = () => {
         try {
             console.log("🔹 Sending FormData:", formData); // ✅ Log formData before sending
 
-            const res = await fetch("http://localhost:5000/api/profile/profile-step", {
+            const res = await fetch("https://fullstack-matrimony-application.onrender.com/api/profile/profile-step", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

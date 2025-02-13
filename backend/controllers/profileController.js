@@ -80,7 +80,7 @@ const getUserProfileStatus = async (req, res) => {
 const getUserProfile = async (req, res) => {
     try {
         const userId = req.user.id;
-        const BASE_URL = process.env.BASE_URL || "http://localhost:5000"; // ✅ Fallback if env fails
+        const BASE_URL = process.env.BASE_URL || "https://fullstack-matrimony-application.onrender.com"; // ✅ Fallback if env fails
 
         const user = await User.findById(userId).select("name email profileCompleted");
         if (!user) return res.status(404).json({ message: "User not found" });
@@ -148,7 +148,7 @@ const uploadProfilePhoto = async (req, res) => {
 const uploadGalleryImages = async (req, res) => {
     try {
         const userId = req.user.id;
-        const BASE_URL = process.env.BASE_URL || "http://localhost:5000"; // ✅ Ensure correct base URL
+        const BASE_URL = process.env.BASE_URL || "https://fullstack-matrimony-application.onrender.com"; // ✅ Ensure correct base URL
 
         if (!req.files || req.files.length === 0) {
             return res.status(400).json({ message: "No files uploaded" });
@@ -184,7 +184,7 @@ const uploadGalleryImages = async (req, res) => {
 const getUserGallery = async (req, res) => {
     try {
         const { userId } = req.params;
-        const BASE_URL = process.env.BASE_URL || "http://localhost:5000";
+        const BASE_URL = process.env.BASE_URL || "https://fullstack-matrimony-application.onrender.com";
 
         console.log(`📡 Fetching gallery for user: ${userId}`);
 

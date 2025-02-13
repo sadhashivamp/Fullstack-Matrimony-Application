@@ -25,7 +25,7 @@ const Dashboard = () => {
         const fetchUserProfile = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const res = await axios.get("http://localhost:5000/api/profile/details", {
+                const res = await axios.get("https://fullstack-matrimony-application.onrender.com/api/profile/details", {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 if (res.data.profileCompleted) {

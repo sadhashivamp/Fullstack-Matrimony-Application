@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api/matrimony-sadha-dev/matches";
+const API_BASE_URL = "https://fullstack-matrimony-application.onrender.com/api/matrimony-sadha-dev/matches";
 
 // ✅ Fetch Recommended Matches
 export const getRecommendedMatches = async (userId) => {
